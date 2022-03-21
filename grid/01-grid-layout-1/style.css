@@ -4,7 +4,11 @@ body, html {
 }
 
 .container {
+  display: grid;
+  grid-template: 120px 150px 200px 200px / 20% 80%; 
+  grid-gap: 10px; 
   text-align: center;
+  width: 100%;
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
@@ -20,28 +24,48 @@ body, html {
 }
 
 .header {
+  display: flex;
   background-color: #FFDE22;
+  align-items: center;
+  justify-content: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .sidebar {
   background-color: #FF7755;
+  grid-row-start: 2;
+  grid-row-end: 6;
 }
 
 .nav {
-  background-color: #00DDFF;
+  background-color: #00DDFF; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .article {
   background-color: #bccbde;
+  grid-row: 3 / 6;
+  display:flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: center;
 }
 
 .article p {
   font-size: 18px;
   font-family: sans-serif;
   color: white;
-  text-align: left;
+  text-align: left;  
 }
 
 .footer {
   background-color: #393f4d;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
